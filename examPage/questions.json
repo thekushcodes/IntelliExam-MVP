@@ -1,0 +1,357 @@
+{
+"questions": [
+{
+"id": 1,
+"question": "What is the time complexity to access an element in an array given its index?",
+"options": [
+"O(1)",
+"O(log n)",
+"O(n)",
+"O(n^2)"
+],
+"correctOption": 1,
+"difficulty": 1,
+"topic": "Arrays",
+"subtopic": "Array Traversal and Manipulation",
+"prerequisites": []
+},
+{
+"id": 2,
+"question": "Which searching algorithm sequentially checks each element of a list until a match is found or the whole list has been searched?",
+"options": [
+"Binary search",
+"Linear search",
+"Interpolation search",
+"Exponential search"
+],
+"correctOption": 2,
+"difficulty": 1,
+"topic": "Searching",
+"subtopic": "Linear Search",
+"prerequisites": [
+"Array Traversal and Manipulation"
+]
+},
+{
+"id": 3,
+"question": "What is the primary prerequisite for applying standard binary search directly on an array?",
+"options": [
+"The array elements must be distinct.",
+"The array size must be an exact power of 2.",
+"The array must be sorted in a monotonic order.",
+"The array must contain only positive integers."
+],
+"correctOption": 3,
+"difficulty": 2,
+"topic": "Searching",
+"subtopic": "Binary Search",
+"prerequisites": [
+"Arrays"
+]
+},
+{
+"id": 4,
+"question": "Consider the array [64, 25, 12, 22, 11]. After the first complete pass of standard Selection Sort (finding the minimum element and placing it at the beginning), what is the state of the array?",
+"options": [
+"[11, 25, 12, 22, 64]",
+"[11, 12, 22, 25, 64]",
+"[25, 12, 22, 11, 64]",
+"[12, 25, 64, 22, 11]"
+],
+"correctOption": 1,
+"difficulty": 3,
+"topic": "Sorting",
+"subtopic": "Selection Sort",
+"prerequisites": [
+"Array Traversal and Manipulation",
+"Sorting Fundamentals"
+]
+},
+{
+"id": 5,
+"question": "Which sorting algorithm achieves an optimal best-case time complexity of O(n) when provided with an array that is already completely sorted in ascending order?",
+"options": [
+"Standard Selection Sort",
+"Standard Merge Sort",
+"Insertion Sort",
+"Quick Sort with first element as pivot"
+],
+"correctOption": 3,
+"difficulty": 3,
+"topic": "Complexity Analysis",
+"subtopic": "Best-Case Time Complexity",
+"prerequisites": [
+"Sorting Fundamentals",
+"Insertion Sort"
+]
+},
+{
+"id": 6,
+"question": "An array contains elements [3, 7, 12, 19, 24, 31, 45, 52]. If Binary Search is used to search for the target value 24, which sequence of middle elements will be examined? (Assume integer division mid = (low + high) / 2).",
+"options": [
+"19, 31, 24",
+"24",
+"12, 31, 24",
+"19, 24"
+],
+"correctOption": 1,
+"difficulty": 4,
+"topic": "Searching",
+"subtopic": "Binary Search",
+"prerequisites": [
+"Binary Search"
+]
+},
+{
+"id": 7,
+"question": "What is the total auxiliary (extra) space complexity of standard recursive Merge Sort on an array of size n?",
+"options": [
+"O(1)",
+"O(log n)",
+"O(n)",
+"O(n log n)"
+],
+"correctOption": 3,
+"difficulty": 4,
+"topic": "Complexity Analysis",
+"subtopic": "Space Complexity",
+"prerequisites": [
+"Merge Sort",
+"Basic Recursion"
+]
+},
+{
+"id": 8,
+"question": "In an array of size n containing both positive and negative integers, which approach is most optimal in terms of both time and auxiliary space to segregate even and odd numbers in-place?",
+"options": [
+"Two-pointer technique with left and right indices moving toward each other in O(n) time and O(1) space.",
+"Sorting the entire array using Merge Sort in O(n log n) time and O(n) space.",
+"Creating a secondary temporary array and copying elements in O(n) time and O(n) space.",
+"Nested loops comparing every pair in O(n^2) time and O(1) space."
+],
+"correctOption": 1,
+"difficulty": 5,
+"topic": "Two Pointers",
+"subtopic": "Two-Pointer Techniques",
+"prerequisites": [
+"Arrays",
+"Two-Pointer Techniques"
+]
+},
+{
+"id": 9,
+"question": "What is the recurrence relation that represents the worst-case time complexity of standard Quick Sort when the partition always results in unbalanced subproblems of sizes 0 and n - 1?",
+"options": [
+"T(n) = 2T(n/2) + O(n)",
+"T(n) = T(n - 1) + O(n)",
+"T(n) = T(n/2) + O(1)",
+"T(n) = 2T(n - 1) + O(1)"
+],
+"correctOption": 2,
+"difficulty": 5,
+"topic": "Complexity Analysis",
+"subtopic": "Worst-Case Time Complexity",
+"prerequisites": [
+"Quick Sort",
+"Basic Recursion"
+]
+},
+{
+"id": 10,
+"question": "Given an array sorted in non-decreasing order that contains duplicate elements, which modified binary search condition correctly updates the pointers to find the first occurrence (lower bound index) of a target value?",
+"options": [
+"If arr[mid] == target, return mid immediately.",
+"If arr[mid] == target, set low = mid + 1.",
+"If arr[mid] >= target, record potential answer and set high = mid - 1.",
+"If arr[mid] <= target, record potential answer and set low = mid + 1."
+],
+"correctOption": 3,
+"difficulty": 5,
+"topic": "Searching",
+"subtopic": "Binary Search Variations",
+"prerequisites": [
+"Binary Search"
+]
+},
+{
+"id": 11,
+"question": "A sorting algorithm is considered 'stable' if:",
+"options": [
+"It runs in O(n log n) time across all test cases.",
+"It maintains the relative order of duplicate elements with equal keys.",
+"It sorts the array without requiring any auxiliary memory.",
+"Its best-case and worst-case time complexities are identical."
+],
+"correctOption": 2,
+"difficulty": 3,
+"topic": "Sorting",
+"subtopic": "Sorting Fundamentals",
+"prerequisites": [
+"Sorting Fundamentals"
+]
+},
+{
+"id": 12,
+"question": "You are given a sorted array of distinct integers that has been rotated at an unknown pivot (for example, [4, 5, 6, 7, 0, 1, 2]). How can you search for a target value in O(log n) time?",
+"options": [
+"Perform linear search from both ends simultaneously.",
+"In binary search, identify which half ([low..mid] or [mid..high]) is normally sorted, and check if the target falls within that sorted range.",
+"Sort the rotated array back to its original order using Insertion Sort, then run binary search.",
+"Find the maximum element using linear search in O(n), then binary search each half separately."
+],
+"correctOption": 2,
+"difficulty": 6,
+"topic": "Searching",
+"subtopic": "Binary Search Applications",
+"prerequisites": [
+"Binary Search"
+]
+},
+{
+"id": 13,
+"question": "Given an array of n integers and a target sum k, you need to find two distinct indices whose elements sum to k. If the array is already sorted, what is the most optimal time and auxiliary space complexity to determine if such a pair exists?",
+"options": [
+"O(n log n) time and O(1) space",
+"O(n) time and O(n) space",
+"O(n) time and O(1) space",
+"O(n^2) time and O(1) space"
+],
+"correctOption": 3,
+"difficulty": 4,
+"topic": "Two Pointers",
+"subtopic": "Two-Pointer Techniques",
+"prerequisites": [
+"Arrays",
+"Two-Pointer Techniques"
+]
+},
+{
+"id": 14,
+"question": "Consider the following recursive binary search implementation:\nint search(int arr[], int low, int high, int target) {\n    if (low > high) return -1;\n    int mid = low + (high - low) / 2;\n    if (arr[mid] == target) return mid;\n    if (arr[mid] > target)\n        return search(arr, low, mid, target);\n    return search(arr, mid + 1, high, target);\n}\nWhat bug or issue exists in this implementation?",
+"options": [
+"It throws an array out of bounds error for any valid target.",
+"When arr[mid] > target, passing mid instead of mid - 1 can lead to infinite recursion when low == high.",
+"The calculation low + (high - low) / 2 causes an integer overflow.",
+"It fails to search the right half of the array properly."
+],
+"correctOption": 2,
+"difficulty": 6,
+"topic": "Recursion",
+"subtopic": "Basic Recursion in Searching",
+"prerequisites": [
+"Binary Search",
+"Basic Recursion"
+]
+},
+{
+"id": 15,
+"question": "What is the maximum number of recursive stack frames active at any one time during a standard recursive Quick Sort of an array with n distinct elements in the worst case?",
+"options": [
+"O(1)",
+"O(log n)",
+"O(n)",
+"O(n log n)"
+],
+"correctOption": 3,
+"difficulty": 6,
+"topic": "Complexity Analysis",
+"subtopic": "Space Complexity",
+"prerequisites": [
+"Quick Sort",
+"Basic Recursion",
+"Space Complexity"
+]
+},
+{
+"id": 16,
+"question": "You are given an array of size n containing integers from the range 1 to n - 1 such that exactly one number is duplicated. If modifying the array is forbidden and you must use O(1) auxiliary space and O(n) time, which technique should you apply?",
+"options": [
+"Two pointers from left and right on a sorted copy",
+"Floyd's Tortoise and Hare (Cycle Detection) viewing the array indices and values as a linked list",
+"Binary search on index positions from 0 to n - 1",
+"Nested loops to compare each pair"
+],
+"correctOption": 2,
+"difficulty": 7,
+"topic": "Two Pointers",
+"subtopic": "Two-Pointer Techniques",
+"prerequisites": [
+"Two-Pointer Techniques",
+"Array Traversal and Manipulation"
+]
+},
+{
+"id": 17,
+"question": "We want to find the square root of a non-negative integer x rounded down to the nearest integer using binary search over the search space [0, x]. Which condition determines whether mid is the integer square root?",
+"options": [
+"mid * mid == x only",
+"mid * mid <= x and (mid + 1) * (mid + 1) > x",
+"mid <= x / 2",
+"(mid - 1) * (mid - 1) <= x and mid * mid >= x"
+],
+"correctOption": 2,
+"difficulty": 6,
+"topic": "Searching",
+"subtopic": "Binary Search Applications",
+"prerequisites": [
+"Binary Search"
+]
+},
+{
+"id": 18,
+"question": "Consider an array where every element is at most k positions away from its target position in the sorted array (an 'almost sorted' or k-sorted array). What is the minimum time complexity required to sort this array?",
+"options": [
+"O(n)",
+"O(n log k)",
+"O(k log n)",
+"O(n log n)"
+],
+"correctOption": 2,
+"difficulty": 8,
+"topic": "Sorting",
+"subtopic": "Sorting Fundamentals",
+"prerequisites": [
+"Sorting Fundamentals",
+"Insertion Sort",
+"Complexity Analysis"
+]
+},
+{
+"id": 19,
+"question": "You are given an infinite/unbounded sorted array of positive integers where the length is unknown. How can you find the position of a given key in O(log p) time, where p is the actual position of the key?",
+"options": [
+"Scan sequentially until arr[i] > key, then stop.",
+"Find a bounding range [low, high] by exponentially doubling the index (1, 2, 4, 8, ...) until arr[high] >= key, then perform binary search within [high/2, high].",
+"Estimate the size using a large constant like 10^9 and execute standard binary search.",
+"Apply ternary search starting from index 0."
+],
+"correctOption": 2,
+"difficulty": 8,
+"topic": "Searching",
+"subtopic": "Binary Search Applications",
+"prerequisites": [
+"Binary Search",
+"Complexity Analysis"
+]
+},
+{
+"id": 20,
+"question": "Given two sorted arrays A of size m and B of size n, which approach finds the median of the merged array in O(log(min(m, n))) time?",
+"options": [
+"Merge both arrays into a temporary array of size m + n, then access the middle element.",
+"Run binary search on the partition index of the smaller array such that the total number of elements on the left halves of both arrays equals the total on the right halves, and max(left) <= min(right).",
+"Run two pointers from the beginning of both arrays and count up to (m + n) / 2 elements.",
+"Concatenate A and B, apply Quickselect to locate the median element."
+],
+"correctOption": 2,
+"difficulty": 10,
+"topic": "Searching",
+"subtopic": "Binary Search Applications",
+"prerequisites": [
+"Binary Search",
+"Binary Search Applications",
+"Complexity Analysis"
+]
+}
+]
+}

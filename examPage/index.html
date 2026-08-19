@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Intelli-Exam | Adaptive Examination System</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         LOADING STATE
+    ========================== -->
+    <div id="loading-state" class="state-container">
+        <div class="loader"></div>
+        <h2>Preparing your adaptive exam...</h2>
+        <p>Loading questions and initializing Intelli-Exam.</p>
+    </div>
+
+
+    <!-- =========================
+         ERROR STATE
+    ========================== -->
+    <div id="error-state" class="state-container" style="display: none;">
+        <div class="error-icon">!</div>
+        <h2>Unable to Start Exam</h2>
+        <p id="error-message"></p>
+    </div>
+
+
+    <!-- =========================
+         EXAM CONTAINER
+    ========================== -->
+    <main id="exam-container" style="display: none;">
+
+        <!-- Header -->
+        <header class="exam-header">
+
+            <div class="brand">
+                <div class="brand-icon">I</div>
+
+                <div>
+                    <h1>Intelli-Exam</h1>
+                    <p>Adaptive Examination System</p>
+                </div>
+            </div>
+
+
+            <div class="header-stats">
+
+                <div class="stat">
+                    <span class="stat-label">Question</span>
+                    <span class="stat-value">
+                        <span id="question-number">1</span> /
+                        <span id="total-questions">0</span>
+                    </span>
+                </div>
+
+                <div class="stat">
+                    <span class="stat-label">Score</span>
+                    <span class="stat-value" id="current-score">0</span>
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- Main Exam Content -->
+        <section class="exam-content">
+
+            <!-- Progress -->
+            <div class="progress-section">
+
+                <div class="progress-label">
+                    <span>Exam Progress</span>
+                    <span>Adaptive Mode</span>
+                </div>
+
+                <div class="progress-track">
+                    <div id="progress-bar"></div>
+                </div>
+
+            </div>
+
+
+            <!-- Question Card -->
+            <section class="question-card">
+
+                <!-- Tags -->
+                <div class="question-tags">
+                    <span id="difficulty-badge" class="badge">
+                        Difficulty
+                    </span>
+
+                    <span id="topic-tag" class="tag">
+                        Topic
+                    </span>
+
+                    <span id="subtopic-tag" class="tag">
+                        Subtopic
+                    </span>
+                </div>
+
+
+                <!-- Question -->
+                <h2 id="question-text">
+                    Your question will appear here.
+                </h2>
+
+
+                <!-- Options inserted dynamically by script.js -->
+                <div id="options-container"></div>
+
+
+                <!-- Validation -->
+                <p id="validation-msg" style="display: none;">
+                    Please select an option before submitting.
+                </p>
+
+
+                <!-- Action Buttons -->
+                <div class="actions">
+
+                    <button id="submit-btn" class="btn btn-primary">
+                        Submit Answer
+                    </button>
+
+                    <button id="next-btn"
+                            class="btn btn-secondary"
+                            style="display: none;">
+                        Next Question →
+                    </button>
+
+                </div>
+
+            </section>
+
+
+            <!-- Feedback -->
+            <section id="feedback-container" style="display: none;">
+
+                <div class="feedback-main">
+
+                    <div id="feedback-icon" class="feedback-icon">
+                        ✓
+                    </div>
+
+                    <div>
+                        <h3 id="feedback-title"></h3>
+                        <p id="feedback-text"></p>
+                    </div>
+
+                </div>
+
+
+                <div class="algorithm-box">
+
+                    <span class="algorithm-label">
+                        Adaptive Engine Decision
+                    </span>
+
+                    <p id="algorithm-insight"></p>
+
+                </div>
+
+            </section>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         FINISHED STATE
+    ========================== -->
+    <section id="finished-state"
+             class="state-container results-container"
+             style="display: none;">
+
+        <div class="result-icon">✓</div>
+
+        <h1>Exam Completed</h1>
+
+        <p class="result-subtitle">
+            Here is your performance summary.
+        </p>
+
+
+        <!-- Result Statistics -->
+        <div class="result-grid">
+
+            <div class="result-card">
+                <span class="result-label">Final Score</span>
+                <strong id="final-score">0 / 0</strong>
+            </div>
+
+            <div class="result-card">
+                <span class="result-label">Accuracy</span>
+                <strong id="final-accuracy">0%</strong>
+            </div>
+
+            <div class="result-card">
+                <span class="result-label">Questions Attempted</span>
+                <strong id="final-total">0</strong>
+            </div>
+
+            <div class="result-card">
+                <span class="result-label">Highest Difficulty</span>
+                <strong id="highest-difficulty">N/A</strong>
+            </div>
+
+        </div>
+
+
+        <!-- History -->
+        <div class="history-section">
+
+            <div class="section-heading">
+                <h2>Question History</h2>
+                <p>Review how the adaptive engine adjusted your exam.</p>
+            </div>
+
+            <div id="history-container"></div>
+
+        </div>
+
+
+        <!-- Restart -->
+        <button id="restart-btn" class="btn btn-primary restart-btn">
+            Restart Exam
+        </button>
+
+    </section>
+
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>
