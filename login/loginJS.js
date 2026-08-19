@@ -12,7 +12,7 @@ form.addEventListener("submit", function (event) {
     for (let i = 0; i < users.length; i++) {
         if ((users[i].email === emailInput.value) && (users[i].pass === passwordInput.value)) {
             console.log("ok")
-            window.location.href = "./examPage/examPage.html";
+            window.location.href = "/IntelliExam-MVP/examPage/examPage.html";
         }
     }
 });
